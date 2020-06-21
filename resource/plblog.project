@@ -17,17 +17,26 @@
     👉 Projeto
     --------------------------
 
-        npm init -y
+        -- NodeJS
 
-        echo "# PLBLOG" >> README.md
-        git init
-        git add README.md
-        git commit -m "first commit"
-        git remote add origin https://github.com/palladhium/PLBLOG.git
-        git push -u origin master
+          - npm init -y
 
-        git remote add origin https://github.com/palladhium/PLBLOG.git
-        git push -u origin master
+        -- GitHub
+
+          -- Adicionar ao Repositório
+
+            - git init
+            - git add *
+            - git commit -m "PLBLOG-22581220200621"
+            - git remote add origin https://github.com/palladhium/PLBLOG.git
+            - git push -u origin master
+
+          -- Criar Branch
+
+            -- git checkout master
+            -- git fetch
+            -- git pull
+            -- git checkout -b PLBLOG-45431320200621
 
     --------------------------
     🌟 Funcionalidades:
@@ -44,11 +53,11 @@
 
         👉 Responsável por implementar base arquitetural do sistema
 
-      ⭐ PLBLOG-XXXXXXXXXXXXXX
+     ⭐ PLBLOG-45431320200621
 
         👉 Responsável por implementar UC001 (Manter Autenticação Sistema)
 
-      ⭐ PLBLOG-XXXXXXXXXXXXXX
+     ⭐ PLBLOG-XXXXXXXXXXXXXX
 
         👉 Responsável por implementar...
   
