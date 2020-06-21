@@ -1,0 +1,60 @@
+=========================================================================
+🌟 PLBLOG - Plataforma de Lançamento - Gerenciador de BLOG Eletrônico 🌟
+=========================================================================
+
+    --------------------------
+    👉 Tecnologias
+    --------------------------
+    
+      ⭐ NodeJS
+
+        👉 NPM         v6.14.5
+        👉 NodeJS      v14.4.0
+        👉 AngularJS   v1.5.8
+        👉
+
+    --------------------------
+    👉 Projeto
+    --------------------------
+
+        npm init -y
+
+        echo "# PLBLOG" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git remote add origin https://github.com/palladhium/PLBLOG.git
+        git push -u origin master
+
+        git remote add origin https://github.com/palladhium/PLBLOG.git
+        git push -u origin master
+
+    --------------------------
+    🌟 Funcionalidades:
+    --------------------------
+
+     ⭐ UC001 - Manter Autenticação Sistema
+     ⭐ UC002 - Manter Publicação de Artigo
+
+    --------------------------
+    👉 Demandas
+    --------------------------
+
+     ⭐ PLBLOG-22581220200621
+
+        👉 Responsável por implementar base arquitetural do sistema
+
+      ⭐ PLBLOG-XXXXXXXXXXXXXX
+
+        👉 Responsável por implementar UC001 (Manter Autenticação Sistema)
+
+      ⭐ PLBLOG-XXXXXXXXXXXXXX
+
+        👉 Responsável por implementar...
+  
+  --------------------------
+  👉 Sistema
+  --------------------------
+
+    🌟 URL: www.plataformalancamentoblog.com.br 🌟
+
