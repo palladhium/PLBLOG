@@ -3,7 +3,7 @@ GerenciadorAutorizacaoModule.controller("GerenciadorAutorizacaoController", func
     $scope.realizarAutenticacaoUsuario = function(UsuarioAutenticacaoParameter) {
         if(isCamposValid(UsuarioAutenticacaoParameter)) {
             GerenciadorAutorizacaoService.realizarAutenticacaoUsuario(UsuarioAutenticacaoParameter);
-            $location.path("/principal");
+            $location.path("/artigos");
         }
     };
 
