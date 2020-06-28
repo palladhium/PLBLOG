@@ -7,12 +7,21 @@ GerenciadorAutorizacaoModule.controller("GerenciadorAutorizacaoController", func
         }
     };
 
+    $scope.realizarAutenticacaoUsuarioLocalStorage = function(UsuarioAutenticacaoParameter) {
+        if(isCamposValid(UsuarioAutenticacaoParameter)) {
+            GerenciadorAutorizacaoService.realizarAutenticacaoUsuarioLocalStorage(UsuarioAutenticacaoParameter);
+            $location.path("/artigos");
+        }
+    };
+
     function isCamposValid(UsuarioAutenticacaoParameter) {
         if((UsuarioAutenticacaoParameter != undefined) && 
            (UsuarioAutenticacaoParameter.email == "plataforma@plataformalancamento.com.br" && 
             UsuarioAutenticacaoParameter.senha == "plataforma") ||
            (UsuarioAutenticacaoParameter.email == "josequintino@hotmail.com.br" && 
-            UsuarioAutenticacaoParameter.senha == "plataforma")) {
+            UsuarioAutenticacaoParameter.senha == "plataforma") ||
+            (UsuarioAutenticacaoParameter.email == "02735025144" && 
+             UsuarioAutenticacaoParameter.senha == "plataforma")) {
            return true; 
         } else {
             alert("Dados Inválidos!");
