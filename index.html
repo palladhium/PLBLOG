@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="GerenciadorModule">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +18,8 @@
 </head>
 <body>
 
-    <h3>PLBLOG - Plataforma Lançamento (BLOG)</h3>
+    <div ng-view>
+    </div>
 
     <script src="dependecy/librarys/jQuery/jquery.min.js"></script>
     <script src="dependecy/librarys/bootstrap/bootstrap.min.js"></script>
@@ -34,6 +35,12 @@
 
     <script src="dependecy/librarys/angularjs/v1.5.8/angular.min.js"></script>
     <script src="dependecy/librarys/angularjs/v1.5.8/angular-route.min.js"></script>
+
+    <script src="module/gerenciador-module.js"></script>
+
+    <script src="module/gerenciador-autenticacao-module/gerenciador-autorizacao-module.js"></script>
+    <script src="module/gerenciador-autenticacao-module/gerenciador-autorizacao-controller/gerenciador-autorizacao-controller.js"></script>
+    <script src="module/gerenciador-autenticacao-module/gerenciador-autorizacao-service/gerenciador-autorizacao-service.js"></script>
 
 </body>
 </html>
