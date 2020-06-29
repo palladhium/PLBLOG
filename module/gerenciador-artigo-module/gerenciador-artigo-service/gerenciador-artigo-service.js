@@ -1,5 +1,9 @@
 GerenciadorArtigoModule.factory("GerenciadorArtigoService", function() {
 
+    const CHAVE_LOCAL_STORAGE = "TB_ARTIGO";
+
+    let codigo = 0;
+
     var artigoList = [
         // {
         //     codigo: 1,
@@ -37,7 +41,21 @@ GerenciadorArtigoModule.factory("GerenciadorArtigoService", function() {
     ];
 
     var registrarArtigo = function(artigoParameter) {
-        artigoList.push(formatarArtigo(artigoParameter));
+        let Artigo = formatarArtigo(artigoParameter);
+            Artigo.codigo = codigo + 1;
+        artigoList.push(Artigo);
+        registrarArtigoLocalStorage(Artigo);
+    };
+
+    function registrarArtigoLocalStorage(artigoParameter) {
+        artigoParameter.codigo = codigo + 1;
+        let ArtigoSerialized = serializedArtigo(artigoParameter);
+        artigoList.push(ArtigoSerialized);
+        localStorage.setItem(CHAVE_LOCAL_STORAGE, ArtigoSerialized);
+    };
+
+    function serializedArtigo(UsuarioAutenticacaoParameter) {
+        return JSON.stringify(UsuarioAutenticacaoParameter);
     };
 
     function formatarArtigo(artigoParameter) {
@@ -56,8 +74,13 @@ GerenciadorArtigoModule.factory("GerenciadorArtigoService", function() {
     };
 
     var carregarArtigosPublicados = function() {
+        artigoList.push(recuperarArtigosPublicadosLocalStorage());
         return artigoList;
     }
+
+    function recuperarArtigosPublicadosLocalStorage() {
+        return JSON.parse(localStorage.getItem(CHAVE_LOCAL_STORAGE));
+    };
 
     // FIXME [PLBLOG-XXXXXXXXXXXXXX] {} -- "Criar service utilitaria para manipulacao de Datas Formatadas"
     function recuperarNumeroDiaPublicacao() {
