@@ -43,14 +43,12 @@ GerenciadorArtigoModule.factory("GerenciadorArtigoService", function() {
     var registrarArtigo = function(artigoParameter) {
         let Artigo = formatarArtigo(artigoParameter);
             Artigo.codigo = codigo + 1;
-        artigoList.push(Artigo);
         registrarArtigoLocalStorage(Artigo);
     };
 
     function registrarArtigoLocalStorage(artigoParameter) {
         artigoParameter.codigo = codigo + 1;
         let ArtigoSerialized = serializedArtigo(artigoParameter);
-        artigoList.push(ArtigoSerialized);
         localStorage.setItem(CHAVE_LOCAL_STORAGE, ArtigoSerialized);
     };
 
@@ -74,6 +72,7 @@ GerenciadorArtigoModule.factory("GerenciadorArtigoService", function() {
     };
 
     var carregarArtigosPublicados = function() {
+        artigoList = [];
         artigoList.push(recuperarArtigosPublicadosLocalStorage());
         return artigoList;
     }
