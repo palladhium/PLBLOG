@@ -15,5 +15,8 @@ GerenciadorArtigoModule.config(function($routeProvider) {
             controller: "GerenciadorArtigoController",
             templateUrl: "module/gerenciador-artigo-module/gerenciador-artigo-view/gerenciador-artigo-detalhar-view.html"
         })
-
+        .when("/:anoPublicacao/:mesPublicacao/:codigoArtigo", {
+            controller: "GerenciadorArtigoDetalharController",
+            templateUrl: "module/gerenciador-artigo-module/gerenciador-artigo-view/gerenciador-artigo-detalhar_-view.html"
+        })
 });
