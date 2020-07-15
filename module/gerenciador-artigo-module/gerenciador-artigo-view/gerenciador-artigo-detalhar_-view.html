@@ -8,7 +8,7 @@
                         <h3>{{artigo_.titulo}}</h3>
                         <ul class="list-inline d-block pb-4 border-bottom mb-3">
                             <li class="list-inline-item text-color">Postado por {{artigo_.autor}}</li>
-                            <li class="list-inline-item text-color">Em {{artigo_.dataPublicacao}}</li>
+                            <li class="list-inline-item text-color">Em {{artigo_.dataPublicacao | date: "dd/MM/yyyy hh:mm:ss"}}</li>
                             <li class="list-inline-item text-color">Tags: Financeiro, Planejamento</li>
                         </ul>
                         <p>{{artigo_.conteudo}}</p>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <!-- comments -->
-                <div>
+                <div ng-if="false">
                     <h4 class="mb-20">Comments (6)</h4>
                     <!-- comment item -->
                     <div class="d-flex mb-4">
