@@ -8,7 +8,6 @@ GerenciadorAutorizacaoModule.factory("GerenciadorAutorizacaoService", function()
         senha: null,
     };
 
-    // FIXME [PLBLOG-XXXXXXXXXXXXXX]
     const CHAVE_LOCAL_STORAGE = "TB_USUARIO_SISTEMA";
 
     var codigo = 0;
@@ -19,7 +18,6 @@ GerenciadorAutorizacaoModule.factory("GerenciadorAutorizacaoService", function()
         UsuarioAutenticacaoList.push(UsuarioAutenticacaoParameter);
     };
 
-    // FIXME [PLBLOG-XXXXXXXXXXXXXX]
     var realizarAutenticacaoUsuarioLocalStorage = function(UsuarioAutenticacaoParameter) {
         UsuarioAutenticacaoParameter.codigo = codigo + 1;
         let UsuarioAutenticacaoSerialized = serializedAutenticacaoUsuarioSerialized(UsuarioAutenticacaoParameter);
@@ -28,19 +26,15 @@ GerenciadorAutorizacaoModule.factory("GerenciadorAutorizacaoService", function()
         recuperarUsuarioLogado();
     };
 
-    // FIXME [PLBLOG-XXXXXXXXXXXXXX]
     function serializedAutenticacaoUsuarioSerialized(UsuarioAutenticacaoParameter) {
         return JSON.stringify(UsuarioAutenticacaoParameter);
     };
 
-    // FIXME [PLBLOG-XXXXXXXXXXXXXX]
     function deserializarAutenticacaoUsuarioDeserialized() {
         return JSON.parse(localStorage.getItem(CHAVE_LOCAL_STORAGE));
     };
 
-    // FIXME [PLBLOG-XXXXXXXXXXXXXX]
     var recuperarUsuarioLogado = function() {
-        console.log(deserializarAutenticacaoUsuarioDeserialized());
        return deserializarAutenticacaoUsuarioDeserialized();
     };
 
