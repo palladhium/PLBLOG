@@ -8,12 +8,22 @@ GerenciadorArtigoModule.controller("GerenciadorArtigoController", function($scop
     };
 
     $scope.registrarArtigo = function(artigoParameter) {
-        GerenciadorArtigoService.registrarArtigo(artigoParameter);
-        $location.path("/artigos");
+        var promise = GerenciadorArtigoService.registrarArtigo(artigoParameter);
+            promise.then(function(response) {
+              $location.path("/artigos");
+            });
+            promise.catch(function(error) {
+              window.alert("Erro ao tentar Salvar o Artigo!");
+              console.log("Erro ao tentar Salvar o Artigo!");
+            });
     };
 
     function carregarArtigosPublicados() {
-        $scope.artigoList = GerenciadorArtigoService.carregarArtigosPublicados();
+        var artigoFormatadoList = [];
+        var promise = GerenciadorArtigoService.carregarArtigosPublicados();
+            promise.then(function(response) {
+                $scope.artigoList = response.data;
+            });
         return $scope.artigoList;
     };
 

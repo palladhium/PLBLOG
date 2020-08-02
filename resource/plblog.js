@@ -24,7 +24,7 @@
         -- GitHub
 
           -- Configurar dados dos usuários
-          
+
               git config --global user.email "palladhium@outlook.com.br"
               git config --global user.name "Palladhium"
 
@@ -76,23 +76,25 @@
 
         👉 Responsável por implementar UC002 (Manter Publicação de Artigos)
 
+            👉 PLBLOG-33111220200730 - Responsável por implementar integração com a API (PLBLOG-API)
+
       ⭐ PLBLOG-59212220200714
 
         👉 Responsável por implementar UC003 (Manter Newsletter)
 
             ⭐ Responsável por manter o cadastro de novo usuários para recebimento de novos artigos via e-mail
-  
+
   --------------------------
   🌟 Tarefas
   --------------------------
 
-    ⭐ UC002 (Manter Publicação de Artigos)  
+    ⭐ UC002 (Manter Publicação de Artigos)
 
-      👉 [EXECUTANDO] Corrigir formatação de datas em todas as telas 
+      👉 [EXECUTANDO] Corrigir formatação de datas em todas as telas
       👉 [OK] Implementar persistência dos dados de Login no Local Storage
       👉 [OK] Implementar persistência das Publicações de Artigos no Local Storage
       👉 [OK] Ao carregar os Artigos Publicados o sistema está duplicando os artigos publicados
-      👉 [AGUARDANDO] Corrigir erro: Na funcionalidade de listar artigos, sem que não tenha nenhum artigo cadastrado, o sistema está apresetando um artigo sem dados 
+      👉 [AGUARDANDO] Corrigir erro: Na funcionalidade de listar artigos, sem que não tenha nenhum artigo cadastrado, o sistema está apresetando um artigo sem dados
       👉 [AGUARDANDO] Implementar controle de menus para um determinado usuário logado
       👉 [AGUARDANDO] Implementar componente de apresentação dos artigos
       👉 [AGUARDANDO] Implementar persistência de dados no Banco de Dados
