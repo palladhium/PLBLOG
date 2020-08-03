@@ -1,7 +1,7 @@
 GerenciadorArtigoModule.factory("GerenciadorArtigoService", function($http) {
 
-    const URL_ARTIGO_SAVE = "http://localhost:9090/artigo/save";
-    const URL_ARTIGO_FINDALL = "http://localhost:9090/artigo/findAll";
+    const URL_ARTIGO_PERSIST = "http://localhost:9094/artigo/persist";
+    const URL_ARTIGO_FINDALL = "http://localhost:9094/artigo/findAll";
     const CHAVE_LOCAL_STORAGE = "TB_ARTIGO";
 
     let codigo = 0;
@@ -10,8 +10,7 @@ GerenciadorArtigoModule.factory("GerenciadorArtigoService", function($http) {
 
     var registrarArtigo = function(artigoParameter) {
         let Artigo = formatarArtigo(artigoParameter);
-            Artigo.codigo = codigo + 1;
-        return $http.post(URL_ARTIGO_SAVE, Artigo);
+        return $http.post(URL_ARTIGO_PERSIST, Artigo);
     };
 
     function registrarArtigoLocalStorage(artigoParameter) {
@@ -26,14 +25,14 @@ GerenciadorArtigoModule.factory("GerenciadorArtigoService", function($http) {
 
     function formatarArtigo(artigoParameter) {
         var artigo = {
-            codigo: artigoList.length + 1,
+            // codigo: artigoList.length + 1,
             titulo: artigoParameter.titulo,
             conteudo: artigoParameter.conteudo,
-            dataPublicacao: new Date(),
-            numeroDiaPublicacao: "16",
-            numeroMesPublicacao: recuperarNumeroDiaPublicacao(),
-            mesPublicacao: "Junho",
-            anoPublicacao: "2020",
+            // dataPublicacao: new Date(),
+            // numeroDiaPublicacao: "16",
+            // numeroMesPublicacao: recuperarNumeroDiaPublicacao(),
+            // mesPublicacao: "Junho",
+            // anoPublicacao: "2020",
             autor: "José Quintin",
           }
         return artigo;
